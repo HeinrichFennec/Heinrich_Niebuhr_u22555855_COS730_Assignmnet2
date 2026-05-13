@@ -1,0 +1,3 @@
+Every class in this system prints a line like [ClassName] methodName when one of its methods runs. This lets me trace each method call back to a message on the sequence diagram.
+For example, when the SubmissionController calls validate_format on the Validator, the Validator prints [Validator] validateFormat. That matches the validateFormat(data) arrow on the diagram. Reading the terminal output and the diagram top to bottom should match line for line.
+I also use this trace in the Task 6 benchmark. I count method calls by capturing stdout for one scenario and counting the lines that start with [. When running benchmark.py the trace is silenced so it does not affect the timing.
